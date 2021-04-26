@@ -102,9 +102,3 @@ class mytool:
         else:
             return("ADD ALL VARIABLES")
 
-bite = mytool("Fastp")
-bite.PE_reads = 100000
-bite.SE_reads = 0
-a = bite.time_complexity()
-b = bite.memory_complexity()
-print(bite)
