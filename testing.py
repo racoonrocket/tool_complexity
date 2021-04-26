@@ -1,4 +1,4 @@
-import tool_complexity
+from tool_complexity import mytool, CrazyTransformer
 
 
 test = mytool("Fastp")
