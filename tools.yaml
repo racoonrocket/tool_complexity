@@ -1,0 +1,39 @@
+-SGA:
+  type : de bruijn hamiltonian
+  variables :
+    - kmersize
+    - number_of_reads
+    - reads_size
+  time_complexity : kmersize*10+100*reads_size/200**2
+  memory_complexity : kmersize*15
+
+-ABYSS:
+  type : de bruijn hamiltonian
+  variables :
+    - kmersize
+    - reads
+    - reads_size
+  time_complexity : kmersize*10
+  memory_complexity : kmersize*15
+
+-BWA-MEM:
+  type : Burrow wheeler
+  steps :
+    -indexing reference genome
+    - yolo burrow wheeler
+
+  variables :
+    - kmersize
+    - number_of_reads
+    - reads_size
+  time_complexity : kmersize*10 + 20
+  memory_complexity : kmersize*15 + 20*read_size
+-Fastp:
+  type : preprocessing
+  steps :
+    -Trimming
+  variables:
+    - PE_reads
+    - SE_reads
+  time_complexity : PE_reads*(1/129397) + SE_reads*(1/645644561)
+  memory_complexity : PE_reads
