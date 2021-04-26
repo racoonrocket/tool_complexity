@@ -9,8 +9,8 @@ If you want to know how much will it take to run a fastp:
 call mytool class
 ```
 myfastp = mytool("fastp")
-call mytool class
 ```
+
 Add variables asked by mytool class
 ```
 myfastp.PE_reads = 0
